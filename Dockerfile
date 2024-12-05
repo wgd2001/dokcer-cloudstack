@@ -9,7 +9,6 @@ COPY RPM-GPG-KEY-EPEL-8 /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8
 COPY agent/ /etc/cloudstack/
 COPY CA/ /etc/pki/
 COPY libvirt/ /etc/pki/
-COPY update-agent-properties.sh /usr/local/bin/update-agent-properties.sh
 RUN chmod +x /usr/local/bin/update-agent-properties.sh
 RUN /usr/local/bin/update-agent-properties.sh
 RUN yum makecache \
